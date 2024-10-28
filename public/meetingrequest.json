@@ -1,0 +1,20 @@
+{
+    "name": "Benjamin Davis",
+    "interests": [
+      "Basketball",
+      "Meditation",
+      "Coding",
+      "Photography"
+    ],
+    "freeTimeSlots": [
+      "11:30 AM",
+      "3:00 PM",
+      "5:40 PM",
+      "8:00 PM"
+    ],
+    "classes": [
+      "Math 101",
+      "Chemistry 201",
+      "Biology 301"
+    ]
+  }

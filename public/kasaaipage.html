@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KASA AI Assistant</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1a365d;
+            --accent-orange: #ed8936;
+        }
+
+        .suggestion-card {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .suggestion-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .voice-animation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
+        }
+
+        .voice-bar {
+            width: 3px;
+            height: 20px;
+            background: var(--primary-blue);
+            animation: voice-wave 1s ease-in-out infinite;
+        }
+
+        @keyframes voice-wave {
+            0%, 100% { height: 20px; }
+            50% { height: 40px; }
+        }
+
+        .voice-bar:nth-child(2) { animation-delay: 0.1s; }
+        .voice-bar:nth-child(3) { animation-delay: 0.2s; }
+        .voice-bar:nth-child(4) { animation-delay: 0.3s; }
+        .voice-bar:nth-child(5) { animation-delay: 0.4s; }
+
+        .ai-response {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+
+        .ai-response.active {
+            max-height: 1000px;
+        }
+
+        .checklist-item {
+            transition: background-color 0.3s ease;
+        }
+
+        .checklist-item:hover {
+            background-color: #f7fafc;
+        }
+
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            background: #e2e8f0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4299e1, #667eea);
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <img src="kasalogo.png" alt="KASA Logo" class="h-12">
+                    <span class="text-2xl font-bold text-gray-800">KASA</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <!-- Goals Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Your Goals Progress</h2>
+            
+            <!-- Electrical Engineering Application -->
+            <div class="suggestion-card bg-white rounded-lg shadow-md p-6 mb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Electrical Engineering at Seneca College</h3>
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Professional Goal</span>
+                </div>
+                
+                <div class="progress-bar mb-6">
+                    <div class="progress-fill" style="width: 30%"></div>
+                </div>
+
+                <button class="show-suggestion bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition mb-4">
+                    Show Application Requirements
+                </button>
+
+                <div class="ai-response">
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h4 class="font-semibold text-lg mb-4">Essential Requirements for Success:</h4>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Academic Requirements -->
+                            <div>
+                                <h5 class="font-semibold text-blue-800 mb-3">Academic Qualifications</h5>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>High School Diploma or equivalent with minimum 65% average</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Strong grades in Mathematics (75%+)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Strong grades in Physics or Science (70%+)</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Personal Requirements -->
+                            <div>
+                                <h5 class="font-semibold text-blue-800 mb-3">Personal Requirements</h5>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Age: Must be at least 18 years old</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Status: Canadian citizen, permanent resident, or study permit</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>English Proficiency: IELTS 6.5+ or equivalent</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Supporting Documents -->
+                            <div>
+                                <h5 class="font-semibold text-blue-800 mb-3">Required Documents</h5>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Official transcripts from all previous institutions</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Two letters of recommendation</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Valid ID and proof of status</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Extracurricular Strengths -->
+                            <div>
+                                <h5 class="font-semibold text-blue-800 mb-3">Recommended Experience</h5>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Leadership roles in school or community</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Participation in STEM projects or competitions</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Volunteer or work experience in related fields</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 p-4 bg-yellow-50 rounded-lg">
+                            <h5 class="font-semibold text-yellow-800 mb-2">Tips for a Stronger Application:</h5>
+                            <ul class="space-y-2 text-yellow-800">
+                                <li class="flex items-start">
+                                    <span class="mr-2">•</span>
+                                    <span>Start your application early to meet priority deadlines</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-2">•</span>
+                                    <span>Get your transcripts evaluated if they're from outside Canada</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-2">•</span>
+                                    <span>Prepare a strong statement of purpose highlighting your interest in electrical engineering</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="mr-2">•</span>
+                                    <span>Research scholarship opportunities and application deadlines</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Housing Search -->
+            <div class="suggestion-card bg-white rounded-lg shadow-md p-6 mb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Find Housing in Toronto</h3>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Personal Goal</span>
+                </div>
+                
+                <div class="progress-bar mb-6">
+                    <div class="progress-fill" style="width: 20%"></div>
+                </div>
+
+                <button class="show-suggestion bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                    Show Housing Tips
+                </button>
+                <div class="ai-response mt-4 text-gray-700 bg-blue-50 p-4 rounded">
+                    Housing search recommendations will be shown here...
+                </div>
+            </div>
+
+            <!-- Language Learning -->
+            <div class="suggestion-card bg-white rounded-lg shadow-md p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Learn English Language</h3>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Personal Goal</span>
+                </div>
+                
+                <div class="progress-bar mb-6">
+                    <div class="progress-fill" style="width: 15%"></div>
+                </div>
+
+                <button class="show-suggestion bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                    Show Language Tips
+                </button>
+                <div class="ai-response mt-4 text-gray-700 bg-blue-50 p-4 rounded">
+                    Language learning recommendations will be shown here...
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Voice Assistant Section -->
+<!-- AI Voice Assistant Section -->
+<section class="bg-white rounded-lg shadow-lg p-8">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8">AI Voice Assistant</h2>
+    <div class="flex flex-col items-center">
+        <div class="voice-animation mb-8">
+            <div class="voice-bar"></div>
+            <div class="voice-bar"></div>
+            <div class="voice-bar"></div>
+            <div class="voice-bar"></div>
+            <div class="voice-bar"></div>
+        </div>
+        <div class="bg-gray-100 rounded-lg p-6 w-full max-w-2xl">
+            <div class="flex items-start mb-4">
+                <div class="bg-blue-600 rounded-full p-2">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                    </svg>
+                </div>
+                <div class="ml-4 bg-blue-50 rounded-lg p-4 flex-1">
+                    <p class="text-gray-700">How can I help you achieve your goals today?</p>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <input type="text" placeholder="Type your message..." class="flex-1 p-3 border rounded-l focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <button class="bg-blue-600 text-white px-6 py-3 rounded-r hover:bg-blue-700 transition">
+                    Send
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Handle suggestion card clicks
+    const suggestionButtons = document.querySelectorAll('.show-suggestion');
+    
+    suggestionButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const response = this.nextElementSibling;
+            response.classList.toggle('active');
+            
+            // Update button text
+            this.textContent = response.classList.contains('active') 
+                ? 'Hide Details' 
+                : button.textContent.includes('Application') 
+                    ? 'Show Application Requirements'
+                    : button.textContent.includes('Housing')
+                        ? 'Show Housing Tips'
+                        : 'Show Language Tips';
+        });
+    });
+
+    // Animate voice bars randomly
+    function animateVoiceBars() {
+        const bars = document.querySelectorAll('.voice-bar');
+        bars.forEach(bar => {
+            bar.style.height = Math.random() * 40 + 10 + 'px';
+        });
+    }
+
+    // Update animation every 100ms
+    setInterval(animateVoiceBars, 100);
+});
+</script>
+</body>
+</html>
