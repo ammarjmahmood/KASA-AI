@@ -1,154 +1,118 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
     // Store connected users
     let myConnections = [];
-
-    // Sample connection data organized by categories
-    const connectionData = {
-        cultural: [
-            {
-                name: 'Maria Rodriguez',
-                origin: 'Mexico',
-                tags: ['Culture', 'Food Enthusiast'],
-                interests: ['Traditional Cooking', 'Language Exchange'],
-                availability: 'Weekends',
-                location: 'Downtown',
-                instagram: '@maria_cooks_mx',
-                bio: 'Teaching Mexican cooking while learning local cuisine!'
-            },
-            {
-                name: 'Yuki Tanaka',
-                origin: 'Japan',
-                tags: ['Culture', 'Arts'],
-                interests: ['Tea Ceremony', 'Local Art Scene'],
-                availability: 'Evening',
-                location: 'East Side',
-                instagram: '@yuki.creates',
-                bio: 'Artist bridging Japanese and local art styles'
-            },
-            {
-                name: 'Ahmed Hassan',
-                origin: 'Egypt',
-                tags: ['Culture', 'Music'],
-                interests: ['Middle Eastern Music', 'Local Festivals'],
-                availability: 'Weekends',
-                location: 'West End',
-                instagram: '@ahmed_beats',
-                bio: 'Musicians looking to blend cultural sounds'
-            }
-        ],
-        professional: [
-            {
-                name: 'Dr. Priya Patel',
-                origin: 'India',
-                tags: ['Work', 'Healthcare'],
-                interests: ['Medical Network', 'Professional Development'],
-                availability: 'Evenings',
-                location: 'Medical District',
-                instagram: '@dr.priya_health',
-                bio: 'Doctor helping medical professionals navigate local healthcare'
-            },
-            {
-                name: 'Chen Wei',
-                origin: 'China',
-                tags: ['Work', 'Tech'],
-                interests: ['Software Development', 'Tech Meetups'],
-                availability: 'Flexible',
-                location: 'Tech Hub',
-                instagram: '@chen_codes',
-                bio: 'Software engineer organizing tech immigrant meetups'
-            }
-        ],
-        school: [
-            {
-                name: 'Sofia Kowalska',
-                origin: 'Poland',
-                tags: ['School', 'Education'],
-                interests: ['Language Learning', 'Study Groups'],
-                availability: 'Afternoons',
-                location: 'University Area',
-                instagram: '@sofia_learns',
-                bio: 'Graduate student organizing study groups'
-            },
-            {
-                name: 'Abdul Rahman',
-                origin: 'Pakistan',
-                tags: ['School', 'STEM'],
-                interests: ['Engineering', 'Academic Research'],
-                availability: 'Weekdays',
-                location: 'Campus',
-                instagram: '@abdul_engineers',
-                bio: 'Engineering student looking for project collaborators'
-            }
-        ],
-        neighbourhood: [
-            {
-                name: 'Fatima Al-Said',
-                origin: 'Lebanon',
-                tags: ['Neighbourhood', 'Community'],
-                interests: ['Local Events', 'Family Activities'],
-                availability: 'Weekends',
-                location: 'Riverside',
-                instagram: '@fatima_community',
-                bio: 'Organizing family-friendly community events'
-            },
-            {
-                name: 'Luis Morales',
-                origin: 'Colombia',
-                tags: ['Neighbourhood', 'Sports'],
-                interests: ['Soccer', 'Community Sports'],
-                availability: 'Evenings',
-                location: 'South Side',
-                instagram: '@luis_plays',
-                bio: 'Creating neighborhood sports leagues'
-            }
-        ],
-        backgroundinterest: [
-            {
-                name: 'Nina Ivanova',
-                origin: 'Russia',
-                tags: ['Background Interest', 'Fitness'],
-                interests: ['Yoga', 'Outdoor Activities'],
-                availability: 'Mornings',
-                location: 'North End',
-                instagram: '@nina_moves',
-                bio: 'Yoga instructor creating inclusive fitness groups'
-            },
-            {
-                name: 'Jamal Wilson',
-                origin: 'Nigeria',
-                tags: ['Background Interest', 'Business'],
-                interests: ['Entrepreneurship', 'Networking'],
-                availability: 'Flexible',
-                location: 'Business District',
-                instagram: '@jamal_startups',
-                bio: 'Connecting immigrant entrepreneurs'
-            }
-        ],
-        aioptimized: [
-            {
-                name: 'Sarah Kim',
-                origin: 'South Korea',
-                tags: ['AI Optimized', 'Tech', 'Culture'],
-                interests: ['AI/ML', 'Cultural Exchange'],
-                availability: 'Flexible',
-                location: 'Innovation District',
-                instagram: '@sarah_ai',
-                bio: 'AI researcher building cultural bridges'
-            },
-            {
-                name: 'Carlos Mendoza',
-                origin: 'Brazil',
-                tags: ['AI Optimized', 'Business', 'Sports'],
-                interests: ['Digital Marketing', 'Soccer'],
-                availability: 'Evenings',
-                location: 'Central District',
-                instagram: '@carlos_digital',
-                bio: 'Digital marketer and soccer enthusiast'
-            }
-        ]
+    let connectionData = {
+        cultural: [],
+        professional: [],
+        school: [],
+        neighbourhood: [],
+        backgroundinterest: [],
+        aioptimized: []
     };
 
-    // Toggle between All and Community views
+    async function fetchUserData() {
+        try {
+            // Use the existing endpoint
+            const response = await fetch('/api/save-form-data');
+            if (!response.ok) {
+                throw new Error('Failed to fetch user data');
+            }
+            const userData = await response.json();
+            
+            if (!userData) {
+                throw new Error('No user data available');
+            }
+
+            // Get the first user from the JSON for comparison
+            const firstUserEmail = Object.keys(userData)[0];
+            const firstUser = userData[firstUserEmail];
+            
+            // Clear existing categories
+            Object.keys(connectionData).forEach(key => {
+                connectionData[key] = [];
+            });
+    
+            // Process each user and categorize them based on similarities with first user
+            Object.entries(userData).forEach(([email, user]) => {
+                if (email === firstUserEmail) return; // Skip first user's own profile
+
+                const connection = {
+                    name: user.personalInfo.fullName,
+                    origin: user.culturalGroup,
+                    tags: [
+                        ...(user.goals.primary || []).map(goal => goal.charAt(0).toUpperCase() + goal.slice(1)),
+                        user.culturalGroup,
+                        user.immigrationStatus.split('_')
+                            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                            .join(' ')
+                    ].filter(Boolean),
+                    interests: [
+                        ...(user.interests.hobbies || []),
+                        ...(user.interests.skills || []),
+                        user.courses,
+                        user.previousWork
+                    ].filter(Boolean),
+                    availability: user.needs.timeline,
+                    location: `${user.destinationInfo.city}, ${user.destinationInfo.country}`,
+                    instagram: user.socialPreferences.connectionMethod,
+                    bio: user.personalInfo.bio
+                };
+
+                // Cultural match
+                if (user.culturalGroup === firstUser.culturalGroup) {
+                    connectionData.cultural.push(connection);
+                }
+
+                // Professional match (skills or work experience)
+                if (
+                    user.interests.skills?.some(skill => 
+                        firstUser.interests.skills?.includes(skill)) ||
+                    user.previousWork === firstUser.previousWork
+                ) {
+                    connectionData.professional.push(connection);
+                }
+
+                // Educational match
+                if (
+                    user.goals.primary?.some(goal => 
+                        firstUser.goals.primary?.includes(goal)) ||
+                    user.courses === firstUser.courses
+                ) {
+                    connectionData.school.push(connection);
+                }
+
+                // Location match
+                if (user.destinationInfo.city === firstUser.destinationInfo.city) {
+                    connectionData.neighbourhood.push(connection);
+                }
+
+                // Interest/hobby match
+                if (user.interests.hobbies?.some(hobby => 
+                    firstUser.interests.hobbies?.includes(hobby))) {
+                    connectionData.backgroundinterest.push(connection);
+                }
+
+                // Technical/AI match
+                if (
+                    (user.courses && firstUser.courses && 
+                    user.courses.toLowerCase().includes('computer') || 
+                    user.courses.toLowerCase().includes('data') ||
+                    user.courses === firstUser.courses) ||
+                    (user.interests.skills?.includes('technology') && 
+                    firstUser.interests.skills?.includes('technology'))
+                ) {
+                    connectionData.aioptimized.push(connection);
+                }
+            });
+        } catch (error) {
+            console.error('Error fetching user data:', error);
+            connectionData = {};
+        }
+    }
+
+    // Initialize the data
+    await fetchUserData();
+
     const viewButtons = document.querySelectorAll('.view-toggle button');
     const communityFilters = document.getElementById('communityFilters');
 
@@ -169,7 +133,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Handle community tags selection
     const communityTags = document.querySelectorAll('.community-tag');
     const selectedTagsContainer = document.querySelector('.selected-tags');
 
@@ -210,7 +173,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Function to create a more detailed connection card
     function createDetailedConnectionCard(connection, isConnected = false) {
         const card = document.createElement('div');
         card.className = 'connection-card';
@@ -223,27 +185,27 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="connection-name">${connection.name}</div>
                     <div class="connection-origin">${connection.origin}</div>
                     <div class="connection-tags">
-                        ${connection.tags.map(tag => `
+                        ${connection.tags.filter(Boolean).map(tag => `
                             <span class="connection-tag">${tag}</span>
                         `).join('')}
                     </div>
                 </div>
             </div>
             <div class="connection-details">
-                <p class="connection-bio">${connection.bio}</p>
+                <p class="connection-bio">${connection.bio || 'No bio provided'}</p>
                 <div class="connection-interests">
-                    <strong>Interests:</strong> ${connection.interests.join(', ')}
+                    <strong>Interests:</strong> ${connection.interests.filter(Boolean).join(', ') || 'None specified'}
                 </div>
                 <div class="connection-availability">
-                    <strong>Available:</strong> ${connection.availability}
+                    <strong>Timeline:</strong> ${connection.availability || 'Not specified'}
                 </div>
                 <div class="connection-location">
-                    <strong>Location:</strong> ${connection.location}
+                    <strong>Location:</strong> ${connection.location || 'Not specified'}
                 </div>
             </div>
             <button class="connect-btn">${isConnected ? 'Connected' : 'Connect'}</button>
             <div class="instagram-handle ${isConnected ? 'visible' : ''}">
-                <i class="fab fa-instagram"></i> ${connection.instagram}
+                <i class="fab fa-instagram"></i> ${connection.instagram || 'No contact method provided'}
             </div>
         `;
 
@@ -272,7 +234,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 updateMyConnectionsSection();
             }
             
-            // Refresh connections display
             const activeView = document.querySelector('.view-toggle button.active').textContent;
             if (activeView === 'Community') {
                 const selectedFilters = Array.from(document.querySelectorAll('.community-tag.active'))
@@ -294,7 +255,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return card;
     }
 
-    // Function to update My Connections section
     function updateMyConnectionsSection() {
         const connectionsSection = document.querySelector('.connections-section');
         const existingMyConnections = document.querySelector('.my-connections');
@@ -320,12 +280,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Function to populate connections based on selected filters
     function populateConnections(filters = []) {
         const connectionsSection = document.querySelector('.connections-section');
         connectionsSection.innerHTML = '';
 
-        // Always show My Connections section if there are connections
         if (myConnections.length > 0) {
             const myConnectionsDiv = document.createElement('div');
             myConnectionsDiv.className = 'connection-group my-connections';
@@ -340,11 +298,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // Handle filters
         const categoriesToShow = filters.length > 0 ? filters : Object.keys(connectionData);
 
         categoriesToShow.forEach(category => {
-            if (connectionData[category]) {
+            if (connectionData[category] && connectionData[category].length > 0) {
                 const groupDiv = document.createElement('div');
                 groupDiv.className = 'connection-group';
                 groupDiv.innerHTML = `
@@ -374,18 +331,14 @@ document.addEventListener('DOMContentLoaded', function() {
 function removeTag(button) {
     const tag = button.parentElement;
     const tagText = tag.textContent.trim().slice(0, -1);
-    
-    // Remove from selected tags
     tag.remove();
     
-    // Deactivate the corresponding community tag
     const communityTag = Array.from(document.querySelectorAll('.community-tag'))
         .find(t => t.textContent === tagText);
     if (communityTag) {
         communityTag.classList.remove('active');
     }
     
-    // Update connections based on remaining filters
     const selectedFilters = Array.from(document.querySelectorAll('.community-tag.active'))
         .map(tag => tag.textContent.toLowerCase().replace(/\s+/g, ''));
     populateConnections(selectedFilters);

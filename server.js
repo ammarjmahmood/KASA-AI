@@ -106,6 +106,21 @@ app.post('/api/save-form-data', async (req, res) => {
     }
 });
 
+app.get('/api/save-form-data', async (req, res) => {
+    try {
+        const filePath = path.join(__dirname, 'data', 'form_responses.json');
+        const fileContent = await fs.readFile(filePath, 'utf8');
+        const userData = JSON.parse(fileContent);
+        res.json(userData);
+    } catch (error) {
+        console.error('Error reading user data:', error);
+        res.status(500).json({ 
+            success: false, 
+            error: 'Failed to retrieve user data' 
+        });
+    }
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

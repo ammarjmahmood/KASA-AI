@@ -457,26 +457,24 @@ body {
     <main class="main-container">
         <section class="filters-section">
             <div class="filter-group">
-                <h3 class="filter-title">View Connections</h3>
+                <h3 id="view-connections" class="filter-title">View Connections</h3>
                 <div class="view-toggle">
                     <button class="active">All</button>
                     <button>Community</button>
                 </div>
             </div>
 
-            <div class="filter-group" id="communityFilters" style="display: none;">
-                <h3 class="filter-title">Community Filters</h3>
+            <div id="communityFilters" class="filter-group" style="display: none;">
+                <h3 id="community-filters" class="filter-title">Community Filters</h3>
                 <div class="community-tags">
-                    <span class="community-tag">School</span>
-                    <span class="community-tag">Work</span>
-                    <span class="community-tag">Neighbourhood</span>
-                    <span class="community-tag">Background Interest</span>
-                    <span class="community-tag">Culture</span>
-                    <span class="community-tag">AI Optimized</span>
+                    <button class="community-tag">Cultural</button>
+                    <button class="community-tag">Professional</button>
+                    <button class="community-tag">School</button>
+                    <button class="community-tag">Neighbourhood</button>
+                    <button class="community-tag">Background Interest</button>
+                    <button class="community-tag">AI Optimized</button>
                 </div>
-                <div class="selected-tags">
-                    <!-- Selected tags will be added here dynamically -->
-                </div>
+                <div class="selected-tags"></div>
             </div>
         </section>
 
