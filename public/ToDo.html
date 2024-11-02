@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KASA Goal Tracker</title>
+    <link rel="stylesheet" href="todo_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="kasalogobg.png" alt="KASA Logo" class="logo">
+        <h1 class="logo-text">KASA Goal Tracker</h1>
+    </div>
+    
+    <div class="container">
+        <main class="main-content">
+            <h1>Your Goal Path</h1>
+            
+            <div class="filter-controls">
+                <select id="goalFilter" onchange="filterGoals()">
+                    <option value="all">All Goals</option>
+                    <option value="personal">Personal Goals</option>
+                    <option value="professional">Professional Goals</option>
+                    <option value="specific">Specific Goal</option>
+                </select>
+                
+                <select id="specificGoalType" onchange="filterGoals()" style="display: none;">
+                </select>
+            </div>
+
+            <div id="goalList" class="goal-list">
+            </div>
+        </main>
+
+        <aside class="progress-sidebar">
+            <h2>Goal Progress</h2>
+            <div id="progressMeters" class="progress-meters">
+            </div>
+        </aside>
+    </div>
+
+    <button id="themeToggle" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+        Dark Mode
+    </button>
+
+    <script src="todo_script.js"></script>
+</body>
+</html>
