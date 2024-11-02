@@ -44,13 +44,24 @@ app.post('/api/save-form-data', async (req, res) => {
             personalInfo: {
                 fullName: userData.fullName,
                 email: userData.email,
-                submissionDate: new Date().toISOString()
+                submissionDate: new Date().toISOString(),
+                bio: userData.bio || '',  // New field for user bio
             },
             destinationInfo: {
                 country: userData.destinationCountry,
                 city: userData.destinationCity
             },
+            hobbies: userData.hobbies || '',
+            interests: {  // New structured interests section
+                hobbies: userData.hobbies ? userData.hobbies.split(',').map(h => h.trim()) : [],
+                skills: userData.skills || [],  // New field for skills/expertise
+            },
+            culturalGroup: userData.culturalGroup || '',
+            courses: userData.courses || '',
+            previousWork: userData.previousWork || '',
+            immigrationReason: userData.immigrationReason || '',
             immigrationStatus: userData.immigrationStatus,
+            connections: userData.connections || '',
             languageInfo: {
                 knownLanguages: userData.languages || [],
                 destinationLanguage: userData.destinationLanguage
@@ -62,15 +73,20 @@ app.post('/api/save-form-data', async (req, res) => {
             professionalInfo: {
                 linkedin: userData.linkedin || '',
                 certifications: userData.certifications || [],
-                resumeProvided: !!userData.resume
+                resumeProvided: !!userData.resume,
+                skills: userData.skills || [] // Professional skills from checkbox group
             },
             needs: {
                 timeline: userData.timeline,
                 assistanceRequired: userData.assistance || []
+            },
+            socialPreferences: {  // New section for social connectivity
+                connectionMethod: userData.connectionMethod || '',
+                contactPreference: userData.contactPreference || 'any',
             }
-        };
-
-        // Write to file
+        };      
+        
+        // Write to file    
         await fs.writeFile(
             filePath, 
             JSON.stringify(allResponses, null, 2)

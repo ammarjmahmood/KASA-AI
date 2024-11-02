@@ -1,0 +1,597 @@
+{
+  "ammar-ammarmahmood@gmail.com": {
+    "personalInfo": {
+      "fullName": "Ammar",
+      "email": "ammarmahmood@gmail.com",
+      "submissionDate": "2024-11-02T22:11:35.023Z"
+    },
+    "destinationInfo": {
+      "country": "CA",
+      "city": "Toronto"
+    },
+    "hobbies": "Basketball",
+    "culturalGroup": "Pakistani",
+    "courses": "CCNA",
+    "previousWork": "Engineering",
+    "immigrationReason": "Education",
+    "immigrationStatus": "citizen",
+    "connections": "none",
+    "languageInfo": {
+      "knownLanguages": [
+        "english"
+      ],
+      "destinationLanguage": "basic"
+    },
+    "goals": {
+      "primary": [
+        "education",
+        "community"
+      ],
+      "specific": "Get Citizenship"
+    },
+    "professionalInfo": {
+      "linkedin": "https://www.linkedin.com/in/ammar-jaleel-mahmood-5324a5291",
+      "certifications": "Solidworks",
+      "resumeProvided": true
+    },
+    "needs": {
+      "timeline": "rightnow",
+      "assistanceRequired": "education"
+    },
+    "connectionMethod": "ammarmahmood"
+  },
+  "lilly-lillyang@gmail.com": {
+    "personalInfo": {
+      "fullName": "lilly",
+      "email": "lillyang@gmail.com",
+      "submissionDate": "2024-11-02T22:16:21.069Z"
+    },
+    "destinationInfo": {
+      "country": "US",
+      "city": "Washington"
+    },
+    "hobbies": "Volleyball",
+    "culturalGroup": "Chinese",
+    "courses": "CCNA",
+    "previousWork": "Cleaner",
+    "immigrationReason": "Housing",
+    "immigrationStatus": "student_visa",
+    "connections": "none",
+    "languageInfo": {
+      "knownLanguages": [
+        "mandarin"
+      ],
+      "destinationLanguage": "no"
+    },
+    "goals": {
+      "primary": [
+        "business"
+      ],
+      "specific": "Find house"
+    },
+    "professionalInfo": {
+      "linkedin": "",
+      "certifications": [],
+      "resumeProvided": true
+    },
+    "needs": {
+      "timeline": "rightnow",
+      "assistanceRequired": "housing"
+    },
+    "connectionMethod": "lillyang443"
+  },
+  "john-doe@gmail.com": {
+    "personalInfo": {
+      "fullName": "John Doe",
+      "email": "john-doe@gmail.com",
+      "submissionDate": "2024-11-02T22:11:35.023Z"
+    },
+    "destinationInfo": {
+      "country": "US",
+      "city": "New York"
+    },
+    "hobbies": "Reading",
+    "culturalGroup": "American",
+    "courses": "Project Management",
+    "previousWork": "Marketing",
+    "immigrationReason": "Career",
+    "immigrationStatus": "work_visa",
+    "connections": "friends",
+    "languageInfo": {
+      "knownLanguages": [
+        "english"
+      ],
+      "destinationLanguage": "fluent"
+    },
+    "goals": {
+      "primary": [
+        "work",
+        "community"
+      ],
+      "specific": "Establish a stable career"
+    },
+    "professionalInfo": {
+      "linkedin": "https://www.linkedin.com/in/john-doe",
+      "certifications": "PMP",
+      "resumeProvided": true
+    },
+    "needs": {
+      "timeline": "soon",
+      "assistanceRequired": "job"
+    },
+    "connectionMethod": "john-doe"
+  },
+  "jane-smith@gmail.com": {
+    "personalInfo": {
+      "fullName": "Jane Smith",
+      "email": "jane-smith@gmail.com",
+      "submissionDate": "2024-11-02T22:11:35.023Z"
+    },
+    "destinationInfo": {
+      "country": "UK",
+      "city": "London"
+    },
+    "hobbies": "Photography",
+    "culturalGroup": "British",
+    "courses": "Graphic Design",
+    "previousWork": "Design",
+    "immigrationReason": "Family",
+    "immigrationStatus": "planning",
+    "connections": "family",
+    "languageInfo": {
+      "knownLanguages": [
+        "english"
+      ],
+      "destinationLanguage": "fluent"
+    },
+    "goals": {
+      "primary": [
+        "community",
+        "education"
+      ],
+      "specific": "Connect with local community groups"
+    },
+    "professionalInfo": {
+      "linkedin": "https://www.linkedin.com/in/jane-smith",
+      "certifications": "Adobe Certified",
+      "resumeProvided": false
+    },
+    "needs": {
+      "timeline": "future",
+      "assistanceRequired": "community"
+    },
+    "connectionMethod": "jane-smith"
+  },
+  "michael-brown@gmail.com": {
+    "personalInfo": {
+      "fullName": "Michael Brown",
+      "email": "michael-brown@gmail.com",
+      "submissionDate": "2024-11-02T22:11:35.023Z"
+    },
+    "destinationInfo": {
+      "country": "AU",
+      "city": "Sydney"
+    },
+    "hobbies": "Surfing",
+    "culturalGroup": "Australian",
+    "courses": "Marine Biology",
+    "previousWork": "Research Assistant",
+    "immigrationReason": "Adventure",
+    "immigrationStatus": "visitor",
+    "connections": "none",
+    "languageInfo": {
+      "knownLanguages": [
+        "english"
+      ],
+      "destinationLanguage": "fluent"
+    },
+    "goals": {
+      "primary": [
+        "community",
+        "education"
+      ],
+      "specific": "Learn about marine conservation"
+    },
+    "professionalInfo": {
+      "linkedin": "https://www.linkedin.com/in/michael-brown",
+      "certifications": "Open Water Diver",
+      "resumeProvided": false
+    },
+    "needs": {
+      "timeline": "immediate",
+      "assistanceRequired": "community"
+    },
+    "connectionMethod": "michael-brown"
+  },
+  "emily-white@gmail.com": {
+    "personalInfo": {
+      "fullName": "Emily White",
+      "email": "emily-white@gmail.com",
+      "submissionDate": "2024-11-02T22:11:35.023Z"
+    },
+    "destinationInfo": {
+      "country": "CA",
+      "city": "Vancouver"
+    },
+    "hobbies": "Hiking",
+    "culturalGroup": "Canadian",
+    "courses": "Environmental Science",
+    "previousWork": "Consultant",
+    "immigrationReason": "Quality of Life",
+    "immigrationStatus": "permanent_resident",
+    "connections": "friends",
+    "languageInfo": {
+      "knownLanguages": [
+        "english",
+        "french"
+      ],
+      "destinationLanguage": "fluent"
+    },
+    "goals": {
+      "primary": [
+        "work",
+        "community"
+      ],
+      "specific": "Find a job in environmental consulting"
+    },
+    "professionalInfo": {
+      "linkedin": "https://www.linkedin.com/in/emily-white",
+      "certifications": "LEED AP",
+      "resumeProvided": true
+    },
+    "needs": {
+      "timeline": "soon",
+      "assistanceRequired": "job"
+    },
+    "connectionMethod": "emily-white"
+  },
+  "ahmed-hassan@gmail.com": {
+    "personalInfo": {
+      "fullName": "Ahmed Hassan",
+      "email": "ahmed-hassan@gmail.com",
+      "submissionDate": "2024-11-02T22:11:35.023Z"
+    },
+    "destinationInfo": {
+      "country": "CA",
+      "city": "Toronto"
+    },
+    "hobbies": "Soccer",
+    "culturalGroup": "Egyptian",
+    "courses": "Data Science",
+    "previousWork": "Software Developer",
+    "immigrationReason": "Career Growth",
+    "immigrationStatus": "work_visa",
+    "connections": "friends",
+    "languageInfo": {
+      "knownLanguages": [
+        "arabic",
+        "english"
+      ],
+      "destinationLanguage": "fluent"
+    },
+    "goals": {
+      "primary": [
+        "work",
+        "community"
+      ],
+      "specific": "Secure a job in data analytics"
+    },
+    "professionalInfo": {
+      "linkedin": "https://www.linkedin.com/in/ahmed-hassan",
+      "certifications": "AWS Certified Developer",
+      "resumeProvided": true
+    },
+    "needs": {
+      "timeline": "immediate",
+      "assistanceRequired": "job"
+    },
+    "connectionMethod": "ahmed-hassan"
+  },
+  "meera-patel@gmail.com": {
+    "personalInfo": {
+      "fullName": "Meera Patel",
+      "email": "meera-patel@gmail.com",
+      "submissionDate": "2024-11-02T22:11:35.023Z"
+    },
+    "destinationInfo": {
+      "country": "UK",
+      "city": "Manchester"
+    },
+    "hobbies": "Cooking",
+    "culturalGroup": "Indian",
+    "courses": "Business Management",
+    "previousWork": "Accountant",
+    "immigrationReason": "Family",
+    "immigrationStatus": "permanent_resident",
+    "connections": "family",
+    "languageInfo": {
+      "knownLanguages": [
+        "hindi",
+        "english"
+      ],
+      "destinationLanguage": "fluent"
+    },
+    "goals": {
+      "primary": [
+        "community",
+        "work"
+      ],
+      "specific": "Join a local cooking club"
+    },
+    "professionalInfo": {
+      "linkedin": "https://www.linkedin.com/in/meera-patel",
+      "certifications": "CIMA",
+      "resumeProvided": true
+    },
+    "needs": {
+      "timeline": "future",
+      "assistanceRequired": "community"
+    },
+    "connectionMethod": "meera-patel"
+  },
+  "ming-li@gmail.com": {
+    "personalInfo": {
+      "fullName": "Ming Li",
+      "email": "ming-li@gmail.com",
+      "submissionDate": "2024-11-02T22:11:35.023Z"
+    },
+    "destinationInfo": {
+      "country": "CA",
+      "city": "Calgary"
+    },
+    "hobbies": "Painting",
+    "culturalGroup": "Chinese",
+    "courses": "Fine Arts",
+    "previousWork": "Art Teacher",
+    "immigrationReason": "Quality of Life",
+    "immigrationStatus": "visitor",
+    "connections": "none",
+    "languageInfo": {
+      "knownLanguages": [
+        "mandarin",
+        "english"
+      ],
+      "destinationLanguage": "basic"
+    },
+    "goals": {
+      "primary": [
+        "education",
+        "community"
+      ],
+      "specific": "Attend local art workshops"
+    },
+    "professionalInfo": {
+      "linkedin": "https://www.linkedin.com/in/ming-li",
+      "certifications": "Art Therapy",
+      "resumeProvided": false
+    },
+    "needs": {
+      "timeline": "soon",
+      "assistanceRequired": "community"
+    },
+    "connectionMethod": "ming-li"
+  },
+  "oluwaseun-adeyemi@gmail.com": {
+    "personalInfo": {
+      "fullName": "Oluwaseun Adeyemi",
+      "email": "oluwaseun-adeyemi@gmail.com",
+      "submissionDate": "2024-11-02T22:11:35.023Z"
+    },
+    "destinationInfo": {
+      "country": "US",
+      "city": "Houston"
+    },
+    "hobbies": "Music Production",
+    "culturalGroup": "Nigerian",
+    "courses": "Audio Engineering",
+    "previousWork": "Sound Technician",
+    "immigrationReason": "Career Growth",
+    "immigrationStatus": "work_visa",
+    "connections": "friends",
+    "languageInfo": {
+      "knownLanguages": [
+        "yoruba",
+        "english"
+      ],
+      "destinationLanguage": "fluent"
+    },
+    "goals": {
+      "primary": [
+        "work",
+        "community"
+      ],
+      "specific": "Work in a professional recording studio"
+    },
+    "professionalInfo": {
+      "linkedin": "https://www.linkedin.com/in/oluwaseun-adeyemi",
+      "certifications": "Pro Tools Certified",
+      "resumeProvided": true
+    },
+    "needs": {
+      "timeline": "immediate",
+      "assistanceRequired": "job"
+    },
+    "connectionMethod": "oluwaseun-adeyemi"
+  },
+  "fatima-alzahrani@gmail.com": {
+    "personalInfo": {
+      "fullName": "Fatima Alzahrani",
+      "email": "fatima-alzahrani@gmail.com",
+      "submissionDate": "2024-11-02T22:11:35.023Z"
+    },
+    "destinationInfo": {
+      "country": "CA",
+      "city": "Montreal"
+    },
+    "hobbies": "Cooking",
+    "culturalGroup": "Saudi Arabian",
+    "courses": "Culinary Arts",
+    "previousWork": "Chef",
+    "immigrationReason": "Education",
+    "immigrationStatus": "student_visa",
+    "connections": "none",
+    "languageInfo": {
+      "knownLanguages": [
+        "arabic",
+        "french"
+      ],
+      "destinationLanguage": "intermediate"
+    },
+    "goals": {
+      "primary": [
+        "education",
+        "community"
+      ],
+      "specific": "Learn French cuisine techniques"
+    },
+    "professionalInfo": {
+      "linkedin": "https://www.linkedin.com/in/fatima-alzahrani",
+      "certifications": "ServSafe",
+      "resumeProvided": false
+    },
+    "needs": {
+      "timeline": "soon",
+      "assistanceRequired": "education"
+    },
+    "connectionMethod": "fatima-alzahrani"
+  },
+  "hassan-yousef@gmail.com": {
+    "personalInfo": {
+      "fullName": "Hassan Yousef",
+      "email": "hassan-yousef@gmail.com",
+      "submissionDate": "2024-11-02T22:11:35.023Z"
+    },
+    "destinationInfo": {
+      "country": "DE",
+      "city": "Berlin"
+    },
+    "hobbies": "Cycling",
+    "culturalGroup": "Syrian",
+    "courses": "Mechanical Engineering",
+    "previousWork": "Mechanical Technician",
+    "immigrationReason": "Safety",
+    "immigrationStatus": "refugee",
+    "connections": "none",
+    "languageInfo": {
+      "knownLanguages": [
+        "arabic",
+        "german"
+      ],
+      "destinationLanguage": "intermediate"
+    },
+    "goals": {
+      "primary": [
+        "work",
+        "education"
+      ],
+      "specific": "Pursue higher education in engineering"
+    },
+    "professionalInfo": {
+      "linkedin": "https://www.linkedin.com/in/hassan-yousef",
+      "certifications": "AutoCAD",
+      "resumeProvided": true
+    },
+    "needs": {
+      "timeline": "immediate",
+      "assistanceRequired": "education"
+    },
+    "connectionMethod": "hassan-yousef"
+  },
+  "leila-kazemi@gmail.com": {
+    "personalInfo": {
+      "fullName": "Leila Kazemi",
+      "email": "leila-kazemi@gmail.com",
+      "submissionDate": "2024-11-02T22:11:35.023Z"
+    },
+    "destinationInfo": {
+      "country": "US",
+      "city": "San Francisco"
+    },
+    "hobbies": "Yoga",
+    "culturalGroup": "Iranian",
+    "courses": "Computer Science",
+    "previousWork": "Software Engineer",
+    "immigrationReason": "Career Growth",
+    "immigrationStatus": "work_visa",
+    "connections": "none",
+    "languageInfo": {
+      "knownLanguages": [
+        "persian",
+        "english"
+      ],
+      "destinationLanguage": "fluent"
+    },
+    "goals": {
+      "primary": [
+        "work",
+        "community"
+      ],
+      "specific": "Join a local tech community"
+    },
+    "professionalInfo": {
+      "linkedin": "https://www.linkedin.com/in/leila-kazemi",
+      "certifications": "Certified Scrum Master",
+      "resumeProvided": true
+    },
+    "needs": {
+      "timeline": "immediate",
+      "assistanceRequired": "job"
+    },
+    "connectionMethod": "leila-kazemi"
+  },
+  "lena-lena@gmail.com": {
+    "personalInfo": {
+      "fullName": "lena",
+      "email": "lena@gmail.com",
+      "submissionDate": "2024-11-02T22:55:54.285Z",
+      "bio": "im meeeeeee"
+    },
+    "destinationInfo": {
+      "country": "CA",
+      "city": "Toronto"
+    },
+    "hobbies": "volleyball",
+    "interests": {
+      "hobbies": [
+        "volleyball"
+      ],
+      "skills": [
+        "business"
+      ]
+    },
+    "culturalGroup": "turkish",
+    "courses": "ccna",
+    "previousWork": "asd",
+    "immigrationReason": "sda",
+    "immigrationStatus": "permanent_resident",
+    "connections": "friends",
+    "languageInfo": {
+      "knownLanguages": [
+        "french"
+      ],
+      "destinationLanguage": "intermediate"
+    },
+    "goals": {
+      "primary": [
+        "education"
+      ],
+      "specific": "asd"
+    },
+    "professionalInfo": {
+      "linkedin": "",
+      "certifications": "asd",
+      "resumeProvided": true,
+      "skills": [
+        "business"
+      ]
+    },
+    "needs": {
+      "timeline": "planning",
+      "assistanceRequired": "job"
+    },
+    "socialPreferences": {
+      "connectionMethod": "lneeenenne",
+      "contactPreference": "any"
+    }
+  }
+}

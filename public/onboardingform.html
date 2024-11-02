@@ -18,7 +18,7 @@
         </div>
 
         <form id="onboardingForm">
-            
+
             <!-- Step 0: Personal Information -->
             <div class="form-step active" data-step="1">
                 <h2>Let's get started</h2>
@@ -67,28 +67,51 @@
 
                 <!--Hobbies, culture, connection questions-->
                 <div class="form-group">
-                    <label>Do you have any hobbies?</label>
-                    <textarea id="certifications" name="certifications" rows="3" 
-                        placeholder="List any relevant certifications, degrees, or professional qualifications"></textarea>
-                </div>
-                <div class="form-group">
                     <label>What cultural group do you identify with?</label>
-                    <textarea id="certifications" name="certifications" rows="3" 
+                    <textarea id="culturalGroup" name="culturalGroup" rows="3" 
                         placeholder="List any relevant certifications, degrees, or professional qualifications"></textarea>
+                    <label for="bio">Tell us about yourself (Bio) *</label>
+                    <textarea id="bio" name="bio" required placeholder="Share a brief introduction about yourself, your background, and what you hope to achieve in your new destination" rows="4"></textarea>
+                    <label for="hobbies">What are your hobbies and interests? *</label>
+                    <textarea id="hobbies" name="hobbies" required placeholder="Share your hobbies, interests, and activities you enjoy (e.g., Photography, Sports, Reading, Music)" rows="3"></textarea>
                 </div>
+                
                 <div class="form-group">
                     <label>Are you taking any courses?</label>
-                    <textarea id="certifications" name="certifications" rows="3" 
+                    <textarea id="courses" name="courses" rows="3" 
                         placeholder="List any relevant certifications, degrees, or professional qualifications"></textarea>
                 </div>
                 <div class="form-group">
                     <label>What did you used to work/do before immigrating?</label>
-                    <textarea id="certifications" name="certifications" rows="3" 
+                    <textarea id="previousWork" name="previousWork" rows="3" 
                         placeholder="List any relevant certifications, degrees, or professional qualifications"></textarea>
+                        <label>Skills & Expertise (Select all that apply) *</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="tech" name="skills[]" value="technology">
+                                <label for="tech">Technology</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="business" name="skills[]" value="business">
+                                <label for="business">Business</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="healthcare" name="skills[]" value="healthcare">
+                                <label for="healthcare">Healthcare</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="education" name="skills[]" value="education">
+                                <label for="education">Education</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="arts" name="skills[]" value="arts">
+                                <label for="arts">Arts & Culture</label>
+                            </div>
+                        </div>
                 </div>
                 <div class="form-group">
                     <label>Why are you immigrating?</label>
-                    <textarea id="certifications" name="certifications" rows="3" 
+                    <textarea id="immigrationReason" name="immigrationReason" rows="3" 
                         placeholder="List any relevant certifications, degrees, or professional qualifications"></textarea>
                 </div>
 
@@ -232,7 +255,7 @@
                     <label for="timeline">When are you planning to move?</label>
                     <select id="timeline" name="timeline" required>
                         <option value="">Select timeline</option>
-                        <option value="">Already in the country - immigrated already.</option>
+                        <option value="rightnow">Already in the country - immigrated already.</option>
                         <option value="immediate">Within 1 month</option>
                         <option value="soon">1-3 months</option>
                         <option value="planning">3-6 months</option>
@@ -251,9 +274,9 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Method to reach out with others and make connections - N/A to opt out</label>
+                    <label>Preferred method for others to reach out (Optional)</label>
                     <label>instagram, phone number, telegram, whatsapp etc</label>
-                    <textarea id="connectionmethod" name="connectionmethod" rows="3" 
+                    <textarea id="connectionMethod" name="connectionMethod" rows="3" 
                         placeholder="List any methods of contact if you want to meet new people "></textarea>
                 </div>
                 <div class="button-group">
