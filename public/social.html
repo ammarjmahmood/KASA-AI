@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KASA - Connect & Integrate</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+       /* Root Variables */
+:root {
+    --kasa-primary: #1B365D;
+    --kasa-accent: #DBA858;
+    --kasa-light: #FFFFFF;
+    --kasa-gray: #F7FAFC;
+    --text-dark: #2D3748;
+    --text-gray: #718096;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --radius-md: 0.375rem;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+}
+
+body {
+    background-color: var(--kasa-gray);
+    color: var(--text-dark);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+    background-color: var(--kasa-light);
+    padding: 1rem 2rem;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 2px solid var(--kasa-primary);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.logo-mobile {
+    display: none;
+    height: 30px;
+    width: auto;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--kasa-accent);
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--kasa-primary);
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.dark-mode-toggle:hover {
+    background-color: var(--kasa-gray);
+}
+
+/* Main Container */
+.main-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Filters Section */
+.filters-section {
+    background: var(--kasa-light);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 5rem;
+    height: fit-content;
+    border: 1px solid var(--kasa-primary);
+}
+
+.filter-group {
+    margin-bottom: 1.5rem;
+}
+
+.filter-title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--kasa-primary);
+}
+
+/* View Toggle */
+.view-toggle {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.view-toggle button {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid var(--kasa-primary);
+    background: none;
+    color: var(--kasa-primary);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.view-toggle button.active {
+    background: var(--kasa-primary);
+    color: var(--kasa-light);
+}
+
+/* Community Tags */
+.community-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.community-tag {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    background: var(--kasa-gray);
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid var(--kasa-primary);
+}
+
+.community-tag:hover {
+    background: var(--kasa-primary);
+    color: var(--kasa-light);
+}
+
+.community-tag.active {
+    background: var(--kasa-primary);
+    color: var(--kasa-light);
+}
+
+/* Selected Tags */
+.selected-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.selected-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    background: var(--kasa-primary);
+    color: var(--kasa-light);
+    border-radius: 1rem;
+    font-size: 0.875rem;
+}
+
+.selected-tag button {
+    background: none;
+    border: none;
+    color: var(--kasa-light);
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+/* Connections Section */
+.connections-section {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.connection-group {
+    background: var(--kasa-light);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.connection-group-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--kasa-primary);
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--kasa-accent);
+}
+
+/* Connection Cards */
+.connections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.connection-card {
+    background: var(--kasa-light);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: transform 0.2s;
+    border: 1px solid var(--kasa-primary);
+}
+
+.connection-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.connection-header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid var(--kasa-gray);
+}
+
+.connection-info {
+    flex: 1;
+}
+
+.connection-name {
+    font-weight: 600;
+    color: var(--kasa-primary);
+}
+
+.connection-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-top: 0.5rem;
+}
+
+.connection-tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    background: var(--kasa-gray);
+    border-radius: 1rem;
+    color: var(--text-gray);
+}
+
+.connect-btn {
+    background: var(--kasa-primary);
+    color: var(--kasa-light);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.connect-btn:hover {
+    background: var(--kasa-accent);
+}
+
+.connection-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 1rem;
+}
+
+.connection-bio {
+    margin: 0.5rem 0;
+    font-style: italic;
+    color: var(--text-gray);
+}
+
+.connection-interests,
+.connection-availability,
+.connection-location {
+    margin: 0.5rem 0;
+    font-size: 0.875rem;
+}
+
+.connection-origin {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    margin-top: 0.25rem;
+}
+
+.instagram-handle {
+    background: var(--kasa-primary);
+    color: var(--kasa-light);
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+.instagram-handle.visible {
+    display: block;
+}
+
+/* My Connections Section */
+.my-connections {
+    border-bottom: 2px solid var(--kasa-primary);
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+
+.my-connections .connection-card {
+    background-color: var(--kasa-gray);
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    --kasa-light: #1a202c;
+    --text-dark: #ffffff;
+    --text-gray: #cbd5e0;
+    --kasa-gray: #2d3748;
+}
+
+/* Network Panel Styles */
+.network-toggle {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 100;
+}
+
+.network-btn {
+    background: var(--kasa-primary);
+    color: var(--kasa-light);
+    padding: 1rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.2s;
+}
+
+.network-btn:hover {
+    background: var(--kasa-accent);
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+
+    .filters-section {
+        position: static;
+        margin-bottom: 2rem;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .logo-mobile {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+
+    .profile-section {
+        gap: 1rem;
+    }
+
+    .connections-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .network-toggle {
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    .network-btn {
+        padding: 0.75rem;
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding: 1rem;
+    }
+
+    .community-tags {
+        gap: 0.25rem;
+    }
+
+    .community-tag {
+        padding: 0.25rem 0.75rem;
+        font-size: 0.875rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <!-- Desktop Logo -->
+            <img src="kasalogo.png" alt="KASA" class="logo">
+            <!-- Mobile Logo -->
+            <img src="kasalogo.png" alt="KASA" class="logo-mobile">
+        </div>
+        <div class="profile-section">
+            <button class="dark-mode-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <img src="https://americancarportsinc.com/wp-content/uploads/2020/06/face-placeholder.gif" alt="Profile" class="profile-pic">
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="filters-section">
+            <div class="filter-group">
+                <h3 class="filter-title">View Connections</h3>
+                <div class="view-toggle">
+                    <button class="active">All</button>
+                    <button>Community</button>
+                </div>
+            </div>
+
+            <div class="filter-group" id="communityFilters" style="display: none;">
+                <h3 class="filter-title">Community Filters</h3>
+                <div class="community-tags">
+                    <span class="community-tag">School</span>
+                    <span class="community-tag">Work</span>
+                    <span class="community-tag">Neighbourhood</span>
+                    <span class="community-tag">Background Interest</span>
+                    <span class="community-tag">Culture</span>
+                    <span class="community-tag">AI Optimized</span>
+                </div>
+                <div class="selected-tags">
+                    <!-- Selected tags will be added here dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <section class="connections-section">
+            <div class="connection-group">
+                <h3 class="connection-group-title">Suggested Connections</h3>
+                <div class="connections-grid">
+                    <!-- Connection cards will be added here dynamically -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+<script src="social.js"></script>
+
+</body>
+</html>

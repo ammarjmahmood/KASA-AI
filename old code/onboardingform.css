@@ -1,0 +1,267 @@
+:root {
+    --primary: #1B3A5B;
+    --secondary: #C49A6C;
+    --background: #F5F7FA;
+    --text: #2C3E50;
+    --error: #E74C3C;
+    --success: #2ECC71;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.header {
+    width: 100%;
+    background-color: white;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    height: 50px;
+    object-fit: contain;
+}
+
+.form-container {
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #E2E8F0;
+    margin-bottom: 2.5rem;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--secondary);
+    border-radius: 3px;
+    transition: width 0.4s ease;
+}
+
+.form-step {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+.form-step.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+select, input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #E2E8F0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+select:focus, input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(196, 154, 108, 0.2);
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.checkbox-item:hover {
+    background-color: var(--background);
+}
+
+.file-upload {
+    border: 2px dashed #E2E8F0;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: var(--background);
+}
+
+.file-upload:hover {
+    border-color: var(--secondary);
+    background-color: white;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+    gap: 1rem;
+}
+
+button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-next, .btn-submit {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-prev {
+    background-color: #E2E8F0;
+    color: var(--text);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        padding: 1.5rem;
+    }
+}
+
+/* Add these to your existing CSS file */
+
+.error {
+    border-color: var(--error) !important;
+}
+
+.error-message {
+    color: var(--error);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.success-message {
+    animation: fadeIn 0.5s ease-out;
+}
+
+select[multiple] {
+    height: auto;
+    min-height: 120px;
+    padding: 0.5rem;
+}
+
+select[multiple] option {
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+select[multiple] option:checked {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Improved focus states */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(196, 154, 108, 0.2);
+}
+
+/* Improved hover states */
+input:hover, select:hover, textarea:hover {
+    border-color: var(--secondary);
+}
+
+/* Transition for smooth animations */
+.form-step {
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.form-step:not(.active) {
+    opacity: 0;
+    transform: translateX(100%);
+    position: absolute;
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.error {
+    border-color: red;
+}
+
+.progress {
+    transition: width 0.3s ease-in-out;
+}
+
+.btn-next, .btn-prev {
+    cursor: pointer;
+}

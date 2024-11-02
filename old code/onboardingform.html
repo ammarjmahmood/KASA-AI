@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KASA AI - Welcome</title>
+    <link rel="stylesheet" href="onboardingform.css">
+</head>
+<body>
+    <header class="header">
+        <img src="kasalogo.png" alt="KASA AI Logo" class="logo">
+        <h1>Welcome to KASA AI</h1>
+    </header>
+
+    <div class="form-container">
+        <div class="progress-bar">
+            <div class="progress" style="width: 0%"></div>
+        </div>
+
+        <form id="onboardingForm">
+            <!-- Step 1: Basic Information -->
+            <div class="form-step active" data-step="1">
+                <h2>Let's get started</h2>
+                <div class="form-group">
+                    <label for="destinationCountry">Which country are you moving to?</label>
+                    <select id="destinationCountry" name="destinationCountry" required>
+                        <option value="">Select a country</option>
+                        <option value="CA">Canada</option>
+                        <option value="US">United States</option>
+                        <option value="UK">United Kingdom</option>
+                        <!-- Add more countries -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="destinationCity">Which city are you planning to live in? (if known)</label>
+                    <input type="text" id="destinationCity" name="destinationCity" placeholder="Enter city name or N/A">
+                </div>
+                <div class="button-group">
+                    <button type="button" class="btn-next" onclick="alert('clicked')">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Immigration Status -->
+            <div class="form-step" data-step="2">
+                <h2>Immigration Status</h2>
+                <div class="form-group">
+                    <label>What is your current immigration status?</label>
+                    <select id="immigrationStatus" name="immigrationStatus" required>
+                        <option value="">Select status</option>
+                        <option value="citizen">Citizen</option>
+                        <option value="permanent_resident">Permanent Resident</option>
+                        <option value="work_visa">Work Visa</option>
+                        <option value="student_visa">Student Visa</option>
+                        <option value="visitor">Visitor</option>
+                        <option value="planning">Planning to Apply</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Do you have family or friends in your destination country?</label>
+                    <select id="connections" name="connections" required>
+                        <option value="">Select answer</option>
+                        <option value="family">Yes, family</option>
+                        <option value="friends">Yes, friends</option>
+                        <option value="both">Yes, both family and friends</option>
+                        <option value="none">No connections yet</option>
+                    </select>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="btn-prev">Previous</button>
+                    <button type="button" class="btn-next">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Language Skills -->
+            <div class="form-step" data-step="3">
+                <h2>Language Skills</h2>
+                <div class="form-group">
+                    <label>Which languages do you speak fluently?</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="lang-english" name="languages[]" value="english">
+                            <label for="lang-english">English</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="lang-french" name="languages[]" value="french">
+                            <label for="lang-french">French</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="lang-mandarin" name="languages[]" value="mandarin">
+                            <label for="lang-mandarin">Mandarin</label>
+                        </div>
+                        <!-- Add more languages -->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Do you know the primary language of your destination country?</label>
+                    <select id="destinationLanguage" name="destinationLanguage" required>
+                        <option value="">Select answer</option>
+                        <option value="yes">Yes, fluently</option>
+                        <option value="intermediate">Yes, intermediate level</option>
+                        <option value="basic">Yes, basic level</option>
+                        <option value="no">No, not yet</option>
+                    </select>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="btn-prev">Previous</button>
+                    <button type="button" class="btn-next">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 4: Goals and Timeline -->
+            <div class="form-step" data-step="4">
+                <h2>Your Goals</h2>
+                <div class="form-group">
+                    <label>What are your primary goals? (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="goal-work" name="goals[]" value="work">
+                            <label for="goal-work">Find Work</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="goal-education" name="goals[]" value="education">
+                            <label for="goal-education">Continue Education</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="goal-community" name="goals[]" value="community">
+                            <label for="goal-community">Join Community</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="goal-business" name="goals[]" value="business">
+                            <label for="goal-business">Start Business</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="specificGoals">What are your specific goals for the first year?</label>
+                    <textarea id="specificGoals" name="specificGoals" rows="4" placeholder="Describe your goals and aspirations"></textarea>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="btn-prev">Previous</button>
+                    <button type="button" class="btn-next">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 5: Professional Background -->
+            <div class="form-step" data-step="5">
+                <h2>Professional Background</h2>
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn Profile URL (optional)</label>
+                    <input type="text" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/your-profile">
+                </div>
+                <div class="form-group">
+                    <label>Upload your Resume/CV (optional)</label>
+                    <div class="file-upload">
+                        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+                        <p>Click or drag to upload your resume</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Professional Certifications</label>
+                    <textarea id="certifications" name="certifications" rows="3" 
+                        placeholder="List any relevant certifications, degrees, or professional qualifications"></textarea>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="btn-prev">Previous</button>
+                    <button type="button" class="btn-next">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 6: Additional Information -->
+            <div class="form-step" data-step="6">
+                <h2>Additional Information</h2>
+                <div class="form-group">
+                    <label for="timeline">When are you planning to move?</label>
+                    <select id="timeline" name="timeline" required>
+                        <option value="">Select timeline</option>
+                        <option value="immediate">Within 1 month</option>
+                        <option value="soon">1-3 months</option>
+                        <option value="planning">3-6 months</option>
+                        <option value="future">6+ months</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="assistance">What kind of assistance do you need most?</label>
+                    <select id="assistance" name="assistance" required multiple>
+                        <option value="housing">Finding Housing</option>
+                        <option value="job">Job Search</option>
+                        <option value="education">Education Information</option>
+                        <option value="healthcare">Healthcare System</option>
+                        <option value="community">Community Integration</option>
+                        <option value="legal">Legal Assistance</option>
+                    </select>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="btn-prev">Previous</button>
+                    <button type="submit" class="btn-submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        // Inline script to verify JavaScript is running
+        console.log('Inline script loaded');
+    </script>
+   
+    </body>
+    </html>
