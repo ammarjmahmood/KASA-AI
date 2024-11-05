@@ -3,6 +3,8 @@ const express = require('express');
 const fs = require('fs').promises;
 const path = require('path');
 const app = express();
+const axios = require('axios');
+require('dotenv').config();
 
 app.use(express.json());
 app.use(express.static('public', {index: 'onboardingform.html'}));
@@ -10,6 +12,67 @@ app.use(express.static('public', {index: 'onboardingform.html'}));
 function createUserIdentifier(name, email) {
     return `${name.toLowerCase().replace(/[^a-z0-9]/g, '_')}-${email.toLowerCase().replace(/[^a-z0-9@.]/g, '_')}`;
 }
+
+// Load the first user's data from form_responses.json
+async function loadFirstUserData() {
+    try {
+        const filePath = path.join(__dirname, 'data', 'form_responses.json');
+        const fileContent = await fs.readFile(filePath, 'utf8');
+        const allResponses = JSON.parse(fileContent);
+        const firstUser = Object.values(allResponses)[0]; // Get the first user
+        return firstUser;
+    } catch (error) {
+        console.error('Error loading user data:', error);
+        throw new Error('Could not load user data');
+    }
+}
+
+app.post('/api/chat', async (req, res) => {
+    try {
+        const userMessage = req.body.message;
+        const userData = await loadFirstUserData();
+
+        // Prepare more focused context for ChatGPT
+        const chatMessage = `User Context:
+        - Name: ${userData.personalInfo.fullName}
+        - Immigration Status: ${userData.immigrationStatus}
+        - Location: ${userData.destinationInfo.city}, ${userData.destinationInfo.country}
+        - Goals: ${userData.goals.specific}
+        - Background: ${userData.personalInfo.bio}
+        - Interests: ${userData.hobbies}
+        - Skills: ${userData.professionalInfo.skills.join(', ')}
+        - Languages: ${userData.languageInfo.knownLanguages.join(', ')}
+        - Timeline: ${userData.needs.timeline}
+        - Assistance Needed: ${userData.needs.assistanceRequired}
+        
+        Please provide a brief, practical response (3-4 sentences maximum) to their question while considering this context: ${userMessage}`;
+        const response = await axios.post('https://api.openai.com/v1/chat/completions', {
+            model: "gpt-4",
+            messages: [
+                { 
+                    role: "system", 
+                    content: "You are a concise AI assistant. If the users main language is not english respond in that language or in their language and then below english.Provide brief, practical advice focusing only on the most important points. Avoid using any special formatting or symbols. Keep responses to 10 clear sentences maximum, but still be detailed. You can already read all the content in the json file provided."
+                },
+                { role: "user", content: chatMessage }
+            ],
+            temperature: 0.7,
+            max_tokens: 500  // Reduced for shorter responses
+        }, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${process.env.CHATGPT_API_KEY}`
+            }
+        });
+
+        res.json({ response: response.data.choices[0].message.content });
+    } catch (error) {
+        console.error('Error:', error.response?.data || error.message);
+        res.status(500).json({ 
+            error: 'Failed to communicate with the ChatGPT API',
+            details: error.message
+        });
+    }
+});
 
 app.post('/api/save-form-data', async (req, res) => {
     try {
@@ -67,7 +130,7 @@ app.post('/api/save-form-data', async (req, res) => {
                 destinationLanguage: userData.destinationLanguage
             },
             goals: {
-                primary: userData.goals || [],
+                type: userData.goals || [],
                 specific: userData.specificGoals
             },
             professionalInfo: {

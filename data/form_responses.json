@@ -62,573 +62,630 @@
       "contactPreference": "Any"
     }
   },
-    "ammar-ammar@gmail.com": {
-        "personalInfo": {
-            "fullName": "Ammar",
-            "email": "ammar@gmail.com",
-            "submissionDate": "2024-11-02T23:20:52.616303",
-            "bio": "Passionate about technology and always learning new things."
-        },
-        "destinationInfo": {
-            "country": "US",
-            "city": "New York"
-        },
-        "hobbies": "coding, hiking",
-        "interests": {
-            "hobbies": [
-                "coding",
-                "hiking"
-            ],
-            "skills": [
-                "technology",
-                "business"
-            ]
-        },
-        "culturalGroup": "Turkish",
-        "courses": "Python programming",
-        "previousWork": "Software Developer",
-        "immigrationReason": "work",
-        "immigrationStatus": "work_visa",
-        "connections": "family",
-        "languageInfo": {
-            "knownLanguages": [
-                "english",
-                "urdu"
-            ],
-            "destinationLanguage": "fluent"
-        },
-        "goals": {
-            "primary": [
-                "work"
-            ],
-            "specific": "Secure a tech job in a large company."
-        },
-        "professionalInfo": {
-            "linkedin": "https://linkedin.com/in/ammar",
-            "certifications": "AWS Certified",
-            "resumeProvided": true,
-            "skills": [
-                "technology",
-                "business"
-            ]
-        },
-        "needs": {
-            "timeline": "immediate",
-            "assistanceRequired": "job, housing"
-        },
-        "socialPreferences": {
-            "connectionMethod": "ammarmahmood",
-            "contactPreference": "in person"
-        }
+  "ammar-ammar@gmail.com": {
+    "personalInfo": {
+      "fullName": "Ammar",
+      "email": "ammar@gmail.com",
+      "submissionDate": "2024-11-02T23:20:52.616303",
+      "bio": "Passionate about technology and always learning new things."
     },
-    "lilly-lilly@gmail.com": {
-        "personalInfo": {
-            "fullName": "Lilly",
-            "email": "lilly@gmail.com",
-            "submissionDate": "2024-11-02T23:20:52.616312",
-            "bio": "Creative spirit with a passion for art and culture."
-        },
-        "destinationInfo": {
-            "country": "UK",
-            "city": "London"
-        },
-        "hobbies": "painting, yoga",
-        "interests": {
-            "hobbies": [
-                "painting",
-                "yoga"
-            ],
-            "skills": [
-                "arts",
-                "culture"
-            ]
-        },
-        "culturalGroup": "British",
-        "courses": "Art history",
-        "previousWork": "Art Teacher",
-        "immigrationReason": "lifestyle",
-        "immigrationStatus": "citizen",
-        "connections": "friends",
-        "languageInfo": {
-            "knownLanguages": [
-                "english"
-            ],
-            "destinationLanguage": "fluent"
-        },
-        "goals": {
-            "primary": [
-                "community"
-            ],
-            "specific": "Join local art communities and start a yoga class."
-        },
-        "professionalInfo": {
-            "linkedin": "",
-            "certifications": "Certified Yoga Instructor",
-            "resumeProvided": false,
-            "skills": [
-                "arts",
-                "education"
-            ]
-        },
-        "needs": {
-            "timeline": "rightnow",
-            "assistanceRequired": "community"
-        },
-        "socialPreferences": {
-            "connectionMethod": "instagram",
-            "contactPreference": "any"
-        }
+    "destinationInfo": {
+      "country": "US",
+      "city": "New York"
     },
-    "james-james@gmail.com": {
-        "personalInfo": {
-            "fullName": "James",
-            "email": "james@gmail.com",
-            "submissionDate": "2024-11-02T23:20:52.616317",
-            "bio": "Finance enthusiast, loves reading about world economics."
-        },
-        "destinationInfo": {
-            "country": "CA",
-            "city": "Vancouver"
-        },
-        "hobbies": "reading, hiking",
-        "interests": {
-            "hobbies": [
-                "reading",
-                "hiking"
-            ],
-            "skills": [
-                "business",
-                "finance"
-            ]
-        },
-        "culturalGroup": "Canadian",
-        "courses": "Financial Modeling",
-        "previousWork": "Financial Analyst",
-        "immigrationReason": "work",
-        "immigrationStatus": "permanent_resident",
-        "connections": "both",
-        "languageInfo": {
-            "knownLanguages": [
-                "english",
-                "french"
-            ],
-            "destinationLanguage": "fluent"
-        },
-        "goals": {
-            "primary": [
-                "work",
-                "education"
-            ],
-            "specific": "Get certified as a CFA and work in an investment firm."
-        },
-        "professionalInfo": {
-            "linkedin": "https://linkedin.com/in/james",
-            "certifications": "CFA Level 1",
-            "resumeProvided": true,
-            "skills": [
-                "business",
-                "finance"
-            ]
-        },
-        "needs": {
-            "timeline": "1-3months",
-            "assistanceRequired": "job, housing"
-        },
-        "socialPreferences": {
-            "connectionMethod": "linkedin",
-            "contactPreference": "online"
-        }
+    "hobbies": "coding, hiking",
+    "interests": {
+      "hobbies": [
+        "coding",
+        "hiking"
+      ],
+      "skills": [
+        "technology",
+        "business"
+      ]
     },
-    "joe-joe@gmail.com": {
-        "personalInfo": {
-            "fullName": "Joe",
-            "email": "joe@gmail.com",
-            "submissionDate": "2024-11-02T23:20:52.616320",
-            "bio": "Outdoor enthusiast, loves adventure and exploring new places."
-        },
-        "destinationInfo": {
-            "country": "AU",
-            "city": "Sydney"
-        },
-        "hobbies": "surfing, mountain biking",
-        "interests": {
-            "hobbies": [
-                "surfing",
-                "mountain biking"
-            ],
-            "skills": [
-                "sports",
-                "outdoor activities"
-            ]
-        },
-        "culturalGroup": "Australian",
-        "courses": "Outdoor leadership",
-        "previousWork": "Tour Guide",
-        "immigrationReason": "lifestyle",
-        "immigrationStatus": "visitor",
-        "connections": "none",
-        "languageInfo": {
-            "knownLanguages": [
-                "english"
-            ],
-            "destinationLanguage": "fluent"
-        },
-        "goals": {
-            "primary": [
-                "community"
-            ],
-            "specific": "Find like-minded adventure enthusiasts and explore new places."
-        },
-        "professionalInfo": {
-            "linkedin": "",
-            "certifications": "First Aid, Adventure Leadership",
-            "resumeProvided": false,
-            "skills": [
-                "sports",
-                "leadership"
-            ]
-        },
-        "needs": {
-            "timeline": "planning",
-            "assistanceRequired": "community, activities"
-        },
-        "socialPreferences": {
-            "connectionMethod": "facebook",
-            "contactPreference": "in person"
-        }
+    "culturalGroup": "Turkish",
+    "courses": "Python programming",
+    "previousWork": "Software Developer",
+    "immigrationReason": "work",
+    "immigrationStatus": "work_visa",
+    "connections": "family",
+    "languageInfo": {
+      "knownLanguages": [
+        "english",
+        "urdu"
+      ],
+      "destinationLanguage": "fluent"
     },
-    "badamika-badamika@gmail.com": {
-        "personalInfo": {
-            "fullName": "Badamika",
-            "email": "badamika@gmail.com",
-            "submissionDate": "2024-11-02T23:20:52.616323",
-            "bio": "Technology enthusiast and future entrepreneur."
-        },
-        "destinationInfo": {
-            "country": "DE",
-            "city": "Berlin"
-        },
-        "hobbies": "coding, entrepreneurship",
-        "interests": {
-            "hobbies": [
-                "coding",
-                "entrepreneurship"
-            ],
-            "skills": [
-                "technology",
-                "business"
-            ]
-        },
-        "culturalGroup": "Indian",
-        "courses": "Startup Bootcamp",
-        "previousWork": "Software Engineer",
-        "immigrationReason": "work",
-        "immigrationStatus": "work_visa",
-        "connections": "friends",
-        "languageInfo": {
-            "knownLanguages": [
-                "english",
-                "hindi"
-            ],
-            "destinationLanguage": "basic"
-        },
-        "goals": {
-            "primary": [
-                "business"
-            ],
-            "specific": "Start my own tech startup in Germany."
-        },
-        "professionalInfo": {
-            "linkedin": "https://linkedin.com/in/badamika",
-            "certifications": "Scrum Master",
-            "resumeProvided": true,
-            "skills": [
-                "technology",
-                "leadership"
-            ]
-        },
-        "needs": {
-            "timeline": "3-6months",
-            "assistanceRequired": "business setup, networking"
-        },
-        "socialPreferences": {
-            "connectionMethod": "telegram",
-            "contactPreference": "online"
-        }
+    "goals": {
+      "primary": [
+        "work"
+      ],
+      "specific": "Secure a tech job in a large company."
     },
-    "user6-user6@gmail.com": {
-        "personalInfo": {
-            "fullName": "User 6",
-            "email": "user6@gmail.com",
-            "submissionDate": "2024-11-02T23:20:52.616504",
-            "bio": "Bio for User 6."
-        },
-        "destinationInfo": {
-            "country": "Country6",
-            "city": "City6"
-        },
-        "hobbies": "hobby6",
-        "interests": {
-            "hobbies": [
-                "hobby6"
-            ],
-            "skills": [
-                "skill6"
-            ]
-        },
-        "culturalGroup": "Culture6",
-        "courses": "Course 6",
-        "previousWork": "Previous Work 6",
-        "immigrationReason": "Reason 6",
-        "immigrationStatus": "visitor",
-        "connections": "none",
-        "languageInfo": {
-            "knownLanguages": [
-                "language6"
-            ],
-            "destinationLanguage": "basic"
-        },
-        "goals": {
-            "primary": [
-                "goal6"
-            ],
-            "specific": "Specific goal for User 6."
-        },
-        "professionalInfo": {
-            "linkedin": "",
-            "certifications": "Certification 6",
-            "resumeProvided": false,
-            "skills": [
-                "skill6"
-            ]
-        },
-        "needs": {
-            "timeline": "planning",
-            "assistanceRequired": "assistance6"
-        },
-        "socialPreferences": {
-            "connectionMethod": "method6",
-            "contactPreference": "any"
-        }
+    "professionalInfo": {
+      "linkedin": "https://linkedin.com/in/ammar",
+      "certifications": "AWS Certified",
+      "resumeProvided": true,
+      "skills": [
+        "technology",
+        "business"
+      ]
     },
-    "user7-user7@gmail.com": {
-        "personalInfo": {
-            "fullName": "User 7",
-            "email": "user7@gmail.com",
-            "submissionDate": "2024-11-02T23:20:52.616511",
-            "bio": "Bio for User 7."
-        },
-        "destinationInfo": {
-            "country": "Country7",
-            "city": "City7"
-        },
-        "hobbies": "hobby7",
-        "interests": {
-            "hobbies": [
-                "hobby7"
-            ],
-            "skills": [
-                "skill7"
-            ]
-        },
-        "culturalGroup": "Culture7",
-        "courses": "Course 7",
-        "previousWork": "Previous Work 7",
-        "immigrationReason": "Reason 7",
-        "immigrationStatus": "visitor",
-        "connections": "none",
-        "languageInfo": {
-            "knownLanguages": [
-                "language7"
-            ],
-            "destinationLanguage": "basic"
-        },
-        "goals": {
-            "primary": [
-                "goal7"
-            ],
-            "specific": "Specific goal for User 7."
-        },
-        "professionalInfo": {
-            "linkedin": "",
-            "certifications": "Certification 7",
-            "resumeProvided": false,
-            "skills": [
-                "skill7"
-            ]
-        },
-        "needs": {
-            "timeline": "planning",
-            "assistanceRequired": "assistance7"
-        },
-        "socialPreferences": {
-            "connectionMethod": "method7",
-            "contactPreference": "any"
-        }
+    "needs": {
+      "timeline": "immediate",
+      "assistanceRequired": "job, housing"
     },
-    "user8-user8@gmail.com": {
-        "personalInfo": {
-            "fullName": "User 8",
-            "email": "user8@gmail.com",
-            "submissionDate": "2024-11-02T23:20:52.616518",
-            "bio": "Bio for User 8."
-        },
-        "destinationInfo": {
-            "country": "Country8",
-            "city": "City8"
-        },
-        "hobbies": "hobby8",
-        "interests": {
-            "hobbies": [
-                "hobby8"
-            ],
-            "skills": [
-                "skill8"
-            ]
-        },
-        "culturalGroup": "Culture8",
-        "courses": "Course 8",
-        "previousWork": "Previous Work 8",
-        "immigrationReason": "Reason 8",
-        "immigrationStatus": "visitor",
-        "connections": "none",
-        "languageInfo": {
-            "knownLanguages": [
-                "language8"
-            ],
-            "destinationLanguage": "basic"
-        },
-        "goals": {
-            "primary": [
-                "goal8"
-            ],
-            "specific": "Specific goal for User 8."
-        },
-        "professionalInfo": {
-            "linkedin": "",
-            "certifications": "Certification 8",
-            "resumeProvided": false,
-            "skills": [
-                "skill8"
-            ]
-        },
-        "needs": {
-            "timeline": "planning",
-            "assistanceRequired": "assistance8"
-        },
-        "socialPreferences": {
-            "connectionMethod": "method8",
-            "contactPreference": "any"
-        }
-    },
-    "user9-user9@gmail.com": {
-        "personalInfo": {
-            "fullName": "User 9",
-            "email": "user9@gmail.com",
-            "submissionDate": "2024-11-02T23:20:52.616524",
-            "bio": "Bio for User 9."
-        },
-        "destinationInfo": {
-            "country": "Country9",
-            "city": "City9"
-        },
-        "hobbies": "hobby9",
-        "interests": {
-            "hobbies": [
-                "hobby9"
-            ],
-            "skills": [
-                "skill9"
-            ]
-        },
-        "culturalGroup": "Culture9",
-        "courses": "Course 9",
-        "previousWork": "Previous Work 9",
-        "immigrationReason": "Reason 9",
-        "immigrationStatus": "visitor",
-        "connections": "none",
-        "languageInfo": {
-            "knownLanguages": [
-                "language9"
-            ],
-            "destinationLanguage": "basic"
-        },
-        "goals": {
-            "primary": [
-                "goal9"
-            ],
-            "specific": "Specific goal for User 9."
-        },
-        "professionalInfo": {
-            "linkedin": "",
-            "certifications": "Certification 9",
-            "resumeProvided": false,
-            "skills": [
-                "skill9"
-            ]
-        },
-        "needs": {
-            "timeline": "planning",
-            "assistanceRequired": "assistance9"
-        },
-        "socialPreferences": {
-            "connectionMethod": "method9",
-            "contactPreference": "any"
-        }
-    },
-    "user10-user10@gmail.com": {
-        "personalInfo": {
-            "fullName": "User 10",
-            "email": "user10@gmail.com",
-            "submissionDate": "2024-11-02T23:20:52.616583",
-            "bio": "Bio for User 10."
-        },
-        "destinationInfo": {
-            "country": "Country10",
-            "city": "City10"
-        },
-        "hobbies": "hobby10",
-        "interests": {
-            "hobbies": [
-                "hobby10"
-            ],
-            "skills": [
-                "skill10"
-            ]
-        },
-        "culturalGroup": "Culture10",
-        "courses": "Course 10",
-        "previousWork": "Previous Work 10",
-        "immigrationReason": "Reason 10",
-        "immigrationStatus": "visitor",
-        "connections": "none",
-        "languageInfo": {
-            "knownLanguages": [
-                "language10"
-            ],
-            "destinationLanguage": "basic"
-        },
-        "goals": {
-            "primary": [
-                "goal10"
-            ],
-            "specific": "Specific goal for User 10."
-        },
-        "professionalInfo": {
-            "linkedin": "",
-            "certifications": "Certification 10",
-            "resumeProvided": false,
-            "skills": [
-                "skill10"
-            ]
-        },
-        "needs": {
-            "timeline": "planning",
-            "assistanceRequired": "assistance10"
-        },
-        "socialPreferences": {
-            "connectionMethod": "method10",
-            "contactPreference": "any"
-        }
+    "socialPreferences": {
+      "connectionMethod": "ammarmahmood",
+      "contactPreference": "in person"
     }
+  },
+  "lilly-lilly@gmail.com": {
+    "personalInfo": {
+      "fullName": "Lilly",
+      "email": "lilly@gmail.com",
+      "submissionDate": "2024-11-02T23:20:52.616312",
+      "bio": "Creative spirit with a passion for art and culture."
+    },
+    "destinationInfo": {
+      "country": "UK",
+      "city": "London"
+    },
+    "hobbies": "painting, yoga",
+    "interests": {
+      "hobbies": [
+        "painting",
+        "yoga"
+      ],
+      "skills": [
+        "arts",
+        "culture"
+      ]
+    },
+    "culturalGroup": "British",
+    "courses": "Art history",
+    "previousWork": "Art Teacher",
+    "immigrationReason": "lifestyle",
+    "immigrationStatus": "citizen",
+    "connections": "friends",
+    "languageInfo": {
+      "knownLanguages": [
+        "english"
+      ],
+      "destinationLanguage": "fluent"
+    },
+    "goals": {
+      "primary": [
+        "community"
+      ],
+      "specific": "Join local art communities and start a yoga class."
+    },
+    "professionalInfo": {
+      "linkedin": "",
+      "certifications": "Certified Yoga Instructor",
+      "resumeProvided": false,
+      "skills": [
+        "arts",
+        "education"
+      ]
+    },
+    "needs": {
+      "timeline": "rightnow",
+      "assistanceRequired": "community"
+    },
+    "socialPreferences": {
+      "connectionMethod": "instagram",
+      "contactPreference": "any"
+    }
+  },
+  "james-james@gmail.com": {
+    "personalInfo": {
+      "fullName": "James",
+      "email": "james@gmail.com",
+      "submissionDate": "2024-11-02T23:20:52.616317",
+      "bio": "Finance enthusiast, loves reading about world economics."
+    },
+    "destinationInfo": {
+      "country": "CA",
+      "city": "Vancouver"
+    },
+    "hobbies": "reading, hiking",
+    "interests": {
+      "hobbies": [
+        "reading",
+        "hiking"
+      ],
+      "skills": [
+        "business",
+        "finance"
+      ]
+    },
+    "culturalGroup": "Canadian",
+    "courses": "Financial Modeling",
+    "previousWork": "Financial Analyst",
+    "immigrationReason": "work",
+    "immigrationStatus": "permanent_resident",
+    "connections": "both",
+    "languageInfo": {
+      "knownLanguages": [
+        "english",
+        "french"
+      ],
+      "destinationLanguage": "fluent"
+    },
+    "goals": {
+      "primary": [
+        "work",
+        "education"
+      ],
+      "specific": "Get certified as a CFA and work in an investment firm."
+    },
+    "professionalInfo": {
+      "linkedin": "https://linkedin.com/in/james",
+      "certifications": "CFA Level 1",
+      "resumeProvided": true,
+      "skills": [
+        "business",
+        "finance"
+      ]
+    },
+    "needs": {
+      "timeline": "1-3months",
+      "assistanceRequired": "job, housing"
+    },
+    "socialPreferences": {
+      "connectionMethod": "linkedin",
+      "contactPreference": "online"
+    }
+  },
+  "joe-joe@gmail.com": {
+    "personalInfo": {
+      "fullName": "Joe",
+      "email": "joe@gmail.com",
+      "submissionDate": "2024-11-02T23:20:52.616320",
+      "bio": "Outdoor enthusiast, loves adventure and exploring new places."
+    },
+    "destinationInfo": {
+      "country": "AU",
+      "city": "Sydney"
+    },
+    "hobbies": "surfing, mountain biking",
+    "interests": {
+      "hobbies": [
+        "surfing",
+        "mountain biking"
+      ],
+      "skills": [
+        "sports",
+        "outdoor activities"
+      ]
+    },
+    "culturalGroup": "Australian",
+    "courses": "Outdoor leadership",
+    "previousWork": "Tour Guide",
+    "immigrationReason": "lifestyle",
+    "immigrationStatus": "visitor",
+    "connections": "none",
+    "languageInfo": {
+      "knownLanguages": [
+        "english"
+      ],
+      "destinationLanguage": "fluent"
+    },
+    "goals": {
+      "primary": [
+        "community"
+      ],
+      "specific": "Find like-minded adventure enthusiasts and explore new places."
+    },
+    "professionalInfo": {
+      "linkedin": "",
+      "certifications": "First Aid, Adventure Leadership",
+      "resumeProvided": false,
+      "skills": [
+        "sports",
+        "leadership"
+      ]
+    },
+    "needs": {
+      "timeline": "planning",
+      "assistanceRequired": "community, activities"
+    },
+    "socialPreferences": {
+      "connectionMethod": "facebook",
+      "contactPreference": "in person"
+    }
+  },
+  "badamika-badamika@gmail.com": {
+    "personalInfo": {
+      "fullName": "Badamika",
+      "email": "badamika@gmail.com",
+      "submissionDate": "2024-11-02T23:20:52.616323",
+      "bio": "Technology enthusiast and future entrepreneur."
+    },
+    "destinationInfo": {
+      "country": "DE",
+      "city": "Berlin"
+    },
+    "hobbies": "coding, entrepreneurship",
+    "interests": {
+      "hobbies": [
+        "coding",
+        "entrepreneurship"
+      ],
+      "skills": [
+        "technology",
+        "business"
+      ]
+    },
+    "culturalGroup": "Indian",
+    "courses": "Startup Bootcamp",
+    "previousWork": "Software Engineer",
+    "immigrationReason": "work",
+    "immigrationStatus": "work_visa",
+    "connections": "friends",
+    "languageInfo": {
+      "knownLanguages": [
+        "english",
+        "hindi"
+      ],
+      "destinationLanguage": "basic"
+    },
+    "goals": {
+      "primary": [
+        "business"
+      ],
+      "specific": "Start my own tech startup in Germany."
+    },
+    "professionalInfo": {
+      "linkedin": "https://linkedin.com/in/badamika",
+      "certifications": "Scrum Master",
+      "resumeProvided": true,
+      "skills": [
+        "technology",
+        "leadership"
+      ]
+    },
+    "needs": {
+      "timeline": "3-6months",
+      "assistanceRequired": "business setup, networking"
+    },
+    "socialPreferences": {
+      "connectionMethod": "telegram",
+      "contactPreference": "online"
+    }
+  },
+  "user6-user6@gmail.com": {
+    "personalInfo": {
+      "fullName": "User 6",
+      "email": "user6@gmail.com",
+      "submissionDate": "2024-11-02T23:20:52.616504",
+      "bio": "Bio for User 6."
+    },
+    "destinationInfo": {
+      "country": "Country6",
+      "city": "City6"
+    },
+    "hobbies": "hobby6",
+    "interests": {
+      "hobbies": [
+        "hobby6"
+      ],
+      "skills": [
+        "skill6"
+      ]
+    },
+    "culturalGroup": "Culture6",
+    "courses": "Course 6",
+    "previousWork": "Previous Work 6",
+    "immigrationReason": "Reason 6",
+    "immigrationStatus": "visitor",
+    "connections": "none",
+    "languageInfo": {
+      "knownLanguages": [
+        "language6"
+      ],
+      "destinationLanguage": "basic"
+    },
+    "goals": {
+      "primary": [
+        "goal6"
+      ],
+      "specific": "Specific goal for User 6."
+    },
+    "professionalInfo": {
+      "linkedin": "",
+      "certifications": "Certification 6",
+      "resumeProvided": false,
+      "skills": [
+        "skill6"
+      ]
+    },
+    "needs": {
+      "timeline": "planning",
+      "assistanceRequired": "assistance6"
+    },
+    "socialPreferences": {
+      "connectionMethod": "method6",
+      "contactPreference": "any"
+    }
+  },
+  "user7-user7@gmail.com": {
+    "personalInfo": {
+      "fullName": "User 7",
+      "email": "user7@gmail.com",
+      "submissionDate": "2024-11-02T23:20:52.616511",
+      "bio": "Bio for User 7."
+    },
+    "destinationInfo": {
+      "country": "Country7",
+      "city": "City7"
+    },
+    "hobbies": "hobby7",
+    "interests": {
+      "hobbies": [
+        "hobby7"
+      ],
+      "skills": [
+        "skill7"
+      ]
+    },
+    "culturalGroup": "Culture7",
+    "courses": "Course 7",
+    "previousWork": "Previous Work 7",
+    "immigrationReason": "Reason 7",
+    "immigrationStatus": "visitor",
+    "connections": "none",
+    "languageInfo": {
+      "knownLanguages": [
+        "language7"
+      ],
+      "destinationLanguage": "basic"
+    },
+    "goals": {
+      "primary": [
+        "goal7"
+      ],
+      "specific": "Specific goal for User 7."
+    },
+    "professionalInfo": {
+      "linkedin": "",
+      "certifications": "Certification 7",
+      "resumeProvided": false,
+      "skills": [
+        "skill7"
+      ]
+    },
+    "needs": {
+      "timeline": "planning",
+      "assistanceRequired": "assistance7"
+    },
+    "socialPreferences": {
+      "connectionMethod": "method7",
+      "contactPreference": "any"
+    }
+  },
+  "user8-user8@gmail.com": {
+    "personalInfo": {
+      "fullName": "User 8",
+      "email": "user8@gmail.com",
+      "submissionDate": "2024-11-02T23:20:52.616518",
+      "bio": "Bio for User 8."
+    },
+    "destinationInfo": {
+      "country": "Country8",
+      "city": "City8"
+    },
+    "hobbies": "hobby8",
+    "interests": {
+      "hobbies": [
+        "hobby8"
+      ],
+      "skills": [
+        "skill8"
+      ]
+    },
+    "culturalGroup": "Culture8",
+    "courses": "Course 8",
+    "previousWork": "Previous Work 8",
+    "immigrationReason": "Reason 8",
+    "immigrationStatus": "visitor",
+    "connections": "none",
+    "languageInfo": {
+      "knownLanguages": [
+        "language8"
+      ],
+      "destinationLanguage": "basic"
+    },
+    "goals": {
+      "primary": [
+        "goal8"
+      ],
+      "specific": "Specific goal for User 8."
+    },
+    "professionalInfo": {
+      "linkedin": "",
+      "certifications": "Certification 8",
+      "resumeProvided": false,
+      "skills": [
+        "skill8"
+      ]
+    },
+    "needs": {
+      "timeline": "planning",
+      "assistanceRequired": "assistance8"
+    },
+    "socialPreferences": {
+      "connectionMethod": "method8",
+      "contactPreference": "any"
+    }
+  },
+  "user9-user9@gmail.com": {
+    "personalInfo": {
+      "fullName": "User 9",
+      "email": "user9@gmail.com",
+      "submissionDate": "2024-11-02T23:20:52.616524",
+      "bio": "Bio for User 9."
+    },
+    "destinationInfo": {
+      "country": "Country9",
+      "city": "City9"
+    },
+    "hobbies": "hobby9",
+    "interests": {
+      "hobbies": [
+        "hobby9"
+      ],
+      "skills": [
+        "skill9"
+      ]
+    },
+    "culturalGroup": "Culture9",
+    "courses": "Course 9",
+    "previousWork": "Previous Work 9",
+    "immigrationReason": "Reason 9",
+    "immigrationStatus": "visitor",
+    "connections": "none",
+    "languageInfo": {
+      "knownLanguages": [
+        "language9"
+      ],
+      "destinationLanguage": "basic"
+    },
+    "goals": {
+      "primary": [
+        "goal9"
+      ],
+      "specific": "Specific goal for User 9."
+    },
+    "professionalInfo": {
+      "linkedin": "",
+      "certifications": "Certification 9",
+      "resumeProvided": false,
+      "skills": [
+        "skill9"
+      ]
+    },
+    "needs": {
+      "timeline": "planning",
+      "assistanceRequired": "assistance9"
+    },
+    "socialPreferences": {
+      "connectionMethod": "method9",
+      "contactPreference": "any"
+    }
+  },
+  "user10-user10@gmail.com": {
+    "personalInfo": {
+      "fullName": "User 10",
+      "email": "user10@gmail.com",
+      "submissionDate": "2024-11-02T23:20:52.616583",
+      "bio": "Bio for User 10."
+    },
+    "destinationInfo": {
+      "country": "Country10",
+      "city": "City10"
+    },
+    "hobbies": "hobby10",
+    "interests": {
+      "hobbies": [
+        "hobby10"
+      ],
+      "skills": [
+        "skill10"
+      ]
+    },
+    "culturalGroup": "Culture10",
+    "courses": "Course 10",
+    "previousWork": "Previous Work 10",
+    "immigrationReason": "Reason 10",
+    "immigrationStatus": "visitor",
+    "connections": "none",
+    "languageInfo": {
+      "knownLanguages": [
+        "language10"
+      ],
+      "destinationLanguage": "basic"
+    },
+    "goals": {
+      "primary": [
+        "goal10"
+      ],
+      "specific": "Specific goal for User 10."
+    },
+    "professionalInfo": {
+      "linkedin": "",
+      "certifications": "Certification 10",
+      "resumeProvided": false,
+      "skills": [
+        "skill10"
+      ]
+    },
+    "needs": {
+      "timeline": "planning",
+      "assistanceRequired": "assistance10"
+    },
+    "socialPreferences": {
+      "connectionMethod": "method10",
+      "contactPreference": "any"
+    }
+  },
+  "kamyar-kamkam@gmail.com": {
+    "personalInfo": {
+      "fullName": "Kamyar",
+      "email": "kamkam@gmail.com",
+      "submissionDate": "2024-11-03T00:27:33.843Z",
+      "bio": "I love soccer"
+    },
+    "destinationInfo": {
+      "country": "CA",
+      "city": "Toronto"
+    },
+    "hobbies": "Soccer",
+    "interests": {
+      "hobbies": [
+        "Soccer"
+      ],
+      "skills": [
+        "technology",
+        "healthcare"
+      ]
+    },
+    "culturalGroup": "Persian",
+    "courses": "Engineering",
+    "previousWork": "Cleaner",
+    "immigrationReason": "Education",
+    "immigrationStatus": "student_visa",
+    "connections": "none",
+    "languageInfo": {
+      "knownLanguages": [
+        "english"
+      ],
+      "destinationLanguage": "no"
+    },
+    "goals": {
+      "type": [
+        "education"
+      ],
+      "specific": "To get my citizenship"
+    },
+    "professionalInfo": {
+      "linkedin": "",
+      "certifications": "Solidworks",
+      "resumeProvided": true,
+      "skills": [
+        "technology",
+        "healthcare"
+      ]
+    },
+    "needs": {
+      "timeline": "immediate",
+      "assistanceRequired": "job"
+    },
+    "socialPreferences": {
+      "connectionMethod": "kamkamiscool",
+      "contactPreference": "any"
+    }
+  }
 }

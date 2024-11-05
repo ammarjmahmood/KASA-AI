@@ -5,76 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KASA AI Assistant</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-blue: #1a365d;
-            --accent-orange: #ed8936;
-        }
-
-        .suggestion-card {
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-
-        .suggestion-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .voice-animation {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 3px;
-        }
-
-        .voice-bar {
-            width: 3px;
-            height: 20px;
-            background: var(--primary-blue);
-            animation: voice-wave 1s ease-in-out infinite;
-        }
-
-        @keyframes voice-wave {
-            0%, 100% { height: 20px; }
-            50% { height: 40px; }
-        }
-
-        .voice-bar:nth-child(2) { animation-delay: 0.1s; }
-        .voice-bar:nth-child(3) { animation-delay: 0.2s; }
-        .voice-bar:nth-child(4) { animation-delay: 0.3s; }
-        .voice-bar:nth-child(5) { animation-delay: 0.4s; }
-
-        .ai-response {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-out;
-        }
-
-        .ai-response.active {
-            max-height: 1000px;
-        }
-
-        .checklist-item {
-            transition: background-color 0.3s ease;
-        }
-
-        .checklist-item:hover {
-            background-color: #f7fafc;
-        }
-
-        .progress-bar {
-            height: 8px;
-            border-radius: 4px;
-            background: #e2e8f0;
-            overflow: hidden;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #4299e1, #667eea);
-            transition: width 0.3s ease;
-        }
-    </style>
+    <link rel="stylesheet" href="kasaaicss.css">
 </head>
 <body class="bg-gray-50">
     <nav class="bg-white shadow-lg">
@@ -91,7 +22,7 @@
     <main class="max-w-6xl mx-auto px-4 py-8">
         <!-- Goals Section -->
         <section class="mb-16">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8">Your Goals Progress</h2>
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">AI Goals Mentorship</h2>
             
             <!-- Electrical Engineering Application -->
             <div class="suggestion-card bg-white rounded-lg shadow-md p-6 mb-8">
@@ -105,7 +36,7 @@
                 </div>
 
                 <button class="show-suggestion bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition mb-4">
-                    Show Application Requirements
+                    Show AI Mentorship Response
                 </button>
 
                 <div class="ai-response">
@@ -251,7 +182,7 @@
                 </div>
 
                 <button class="show-suggestion bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-                    Show Housing Tips
+                    Show AI Mentorship Response
                 </button>
                 <div class="ai-response mt-4 text-gray-700 bg-blue-50 p-4 rounded">
                     Housing search recommendations will be shown here...
@@ -270,7 +201,7 @@
                 </div>
 
                 <button class="show-suggestion bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-                    Show Language Tips
+                    Show AI Mentorship Response
                 </button>
                 <div class="ai-response mt-4 text-gray-700 bg-blue-50 p-4 rounded">
                     Language learning recommendations will be shown here...
@@ -281,7 +212,7 @@
         <!-- AI Voice Assistant Section -->
 <!-- AI Voice Assistant Section -->
 <section class="bg-white rounded-lg shadow-lg p-8">
-    <h2 class="text-3xl font-bold text-gray-800 mb-8">AI Voice Assistant</h2>
+    <h2 class="text-3xl font-bold text-gray-800 mb-8">AI Assistant</h2>
     <div class="flex flex-col items-center">
         <div class="voice-animation mb-8">
             <div class="voice-bar"></div>
@@ -307,43 +238,15 @@
                     Send
                 </button>
             </div>
+            <!-- AI Response Display Area -->
+            <div class="mt-4 bg-gray-200 p-4 rounded-lg text-gray-800" id="ai-response">
+                <!-- AI response will be displayed here -->
+            </div>
         </div>
     </div>
 </section>
 </main>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Handle suggestion card clicks
-    const suggestionButtons = document.querySelectorAll('.show-suggestion');
-    
-    suggestionButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const response = this.nextElementSibling;
-            response.classList.toggle('active');
-            
-            // Update button text
-            this.textContent = response.classList.contains('active') 
-                ? 'Hide Details' 
-                : button.textContent.includes('Application') 
-                    ? 'Show Application Requirements'
-                    : button.textContent.includes('Housing')
-                        ? 'Show Housing Tips'
-                        : 'Show Language Tips';
-        });
-    });
-
-    // Animate voice bars randomly
-    function animateVoiceBars() {
-        const bars = document.querySelectorAll('.voice-bar');
-        bars.forEach(bar => {
-            bar.style.height = Math.random() * 40 + 10 + 'px';
-        });
-    }
-
-    // Update animation every 100ms
-    setInterval(animateVoiceBars, 100);
-});
-</script>
+<script src="kasaaijs.js"></script>
 </body>
 </html>
